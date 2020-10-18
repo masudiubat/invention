@@ -3,9 +3,9 @@
 return [
     'service_title' => 'Our <span>services</span>',
     'service_declaration' => 'We strive to incorporate each client’s architectural aspiration as well as our expertise in interior design, master planning and sustainability.',
-    'service_1_title' => 'Interior Design',
+    'service_1_title' => 'Plan and Design',
     'service_1_declaration' => 'Transform your home to comfortable and luxurious home with our interior design service.',
-    'service_2_title' => 'Exterior Design',
+    'service_2_title' => 'Development',
     'service_2_declaration' => 'Curabitur non nulla sit amet nisl tempus convallis quis ac lectus Sed porttitor lectus nibh.',
     'service_3_title' => 'Engineering Consultants',
     'service_3_declaration' => 'Curabitur non nulla sit amet nisl tempus convallis quis ac lectus Sed porttitor lectus nibh.',

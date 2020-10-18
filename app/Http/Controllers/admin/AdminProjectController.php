@@ -39,7 +39,33 @@ class AdminProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        /*
+        $this->validate($request, [
+            'name_en' => 'requierd',
+            'name_bn' => 'required',
+            'client_name_en' => 'required',
+            'client_name_bn' => 'required',
+            'address_en' => 'required',
+            'address_bn' => 'required',
+            'area_en' => 'required',
+            'area_bn' => 'required',
+            'cost_en' => 'required',
+            'cost_bn' => 'required'
+        ], [
+            'name_en.required' => 'Project name english field is empty',
+            'name_bn.required' => 'Project name bangla field is empty',
+            'client_name_en.required' => 'Client name english field is empty',
+            'client_name_bn.required' => 'Client name bangla field is empty',
+            'address_en.required' => 'Address english field is empty',
+            'address_bn.required' => 'Address name bangla field is empty',
+            'area_en.required' => 'Area in english field is empty',
+            'area_bn.required' => 'Area in bangla field is empty',
+            'cost_en.required' => 'Cost in english field is empty',
+            'cost_bn.required' => 'Cost in bangla field is empty',
+        ]);
+        */
+        echo "<pre>";
+        print_r($request->all());
     }
 
     /**

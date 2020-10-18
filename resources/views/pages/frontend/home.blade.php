@@ -94,38 +94,22 @@
             </div>
         </div>
         <div class="row">
+            @foreach($services as $service)
             <div class="col-md-3 col-sm-6 col-xs-12 text-center">
                 <div class="services-list">
                     <span><i class="fa fa-home"></i></span>
-                    <h4>{!! trans('home.service_1_title') !!}</h4>
-                    <p>{!! trans('home.service_1_declaration') !!}</p>
+                    @if(Session::has('locale') && Session::get('locale') == 'bn')
+                    <h4>{{ $service->name_bn }}</h4>
+                    <p>{{ $service->description_bn }}</p>
+                    @else
+                    <h4>{{ $service->name_en }}</h4>
+                    <p>{{ $service->description_en }}</p>
+                    @endif
 
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 text-center">
-                <div class="services-list">
-                    <span><i class="fa fa-university"></i></span>
-                    <h4>{!! trans('home.service_2_title') !!}</h4>
-                    <p>{!! trans('home.service_2_declaration') !!}</p>
 
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 text-center">
-                <div class="services-list">
-                    <span><i class="fa fa-briefcase"></i></span>
-                    <h4>{!! trans('home.service_3_title') !!}</h4>
-                    <p>{!! trans('home.service_3_declaration') !!}</p>
-
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 text-center">
-                <div class="services-list">
-                    <span><i class="fa fa-connectdevelop"></i></span>
-                    <h4>{!! trans('home.service_4_title') !!}</h4>
-                    <p>{!! trans('home.service_4_declaration') !!}</p>
-
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
@@ -178,20 +162,23 @@
                         <div class="row">
                             <div class="slider-content-area">
                                 <div class="content-properties">
-                                    <div class="col-md-6 col-sm-12 col-xs-12 item-single">
+                                    @if(Session::has('locale') && Session::get('locale') == 'en')
+                                    <div class="col-md-12 col-sm-12 col-xs-12 item-single">
                                         <h4>{{ $project->name_en}}</h4>
                                         <p><b>Address: </b>{{ $project->address_en}}</p>
                                         <p><b>Area: </b>{{ $project->area_en}} square feet</p>
                                         <p><b>Cost: </b> {{$project->cost_en }} BDT (approximately)</p>
                                         <p><a href="#" class="btn-b submit-btn">More Details...</a></p>
                                     </div>
-                                    <div class="col-md-6 col-sm-12 col-xs-12 item-single">
+                                    @else
+                                    <div class="col-md-12 col-sm-12 col-xs-12 item-single">
                                         <h4>{{ $project->name_bn }}</h4>
                                         <p><b>ঠিকানা: </b> {{ $project->address_bn}}</p>
                                         <p><b>আয়তন: </b>{{ $project->area_bn}} স্কয়ারফিট</p>
                                         <p><b>খরচ: </b>{{ $project->cost_bn }} টাকা (গড়পড়তা)</p>
                                         <p><a href="#" class="btn-b submit-btn">More Details...</a></p>
                                     </div>
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -209,20 +196,23 @@
                         <div class="row">
                             <div class="slider-content-area">
                                 <div class="content-properties">
-                                    <div class="col-md-6 col-sm-12 col-xs-12 item-single">
+                                    @if(Session::has('locale') && Session::get('locale') == 'en')
+                                    <div class="col-md-12 col-sm-12 col-xs-12 item-single">
                                         <h4>{{ $project->name_en}}</h4>
                                         <p><b>Address: </b>{{ $project->address_en}}</p>
                                         <p><b>Area: </b>{{ $project->area_en}} square feet</p>
                                         <p><b>Cost: </b> {{$project->cost_en }} BDT (approximately)</p>
                                         <p><a href="#" class="btn-b submit-btn">More Details...</a></p>
                                     </div>
-                                    <div class="col-md-6 col-sm-12 col-xs-12 item-single">
+                                    @else
+                                    <div class="col-md-12 col-sm-12 col-xs-12 item-single">
                                         <h4>{{ $project->name_bn }}</h4>
                                         <p><b>ঠিকানা: </b> {{ $project->address_bn}}</p>
                                         <p><b>আয়তন: </b>{{ $project->area_bn}} স্কয়ারফিট</p>
                                         <p><b>খরচ: </b>{{ $project->cost_bn }} টাকা (গড়পড়তা)</p>
                                         <p><a href="#" class="btn-b submit-btn">More Details...</a></p>
                                     </div>
+                                    @endif
                                 </div>
                             </div>
                         </div>

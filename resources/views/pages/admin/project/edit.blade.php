@@ -39,59 +39,29 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="form-group">
-                            <label>Minimal</label>
-                            <select class="form-control select2" style="width: 100%;">
-                                <option selected="selected">Alabama</option>
-                                <option>Alaska</option>
-                                <option>California</option>
-                                <option>Delaware</option>
-                                <option>Tennessee</option>
-                                <option>Texas</option>
-                                <option>Washington</option>
-                            </select>
+                        <div class="form-group has-success {{ $errors->has('name_en') ? 'has-error' : '' }}">
+                            <label for="projectNameEnglish">Project Name (English)<span class="text-danger"> * </span></label>
+                            <input type="text" name="name_en" value="{{old('name_en')}}" class="form-control" id="projectNameEnglish" placeholder="Enter Project Name">
+                            <span class="text-danger">{{ $errors->first('name_en') }}</span>
                         </div>
                         <!-- /.form-group -->
-                        <div class="form-group">
-                            <label>Disabled</label>
-                            <select class="form-control select2" disabled="disabled" style="width: 100%;">
-                                <option selected="selected">Alabama</option>
-                                <option>Alaska</option>
-                                <option>California</option>
-                                <option>Delaware</option>
-                                <option>Tennessee</option>
-                                <option>Texas</option>
-                                <option>Washington</option>
-                            </select>
+                        <div class="form-group has-success {{ $errors->has('name_bn') ? 'has-error' : '' }}">
+                            <label for="projectNameBangla">Project Name (Bangla)<span class="text-danger"> * </span></label>
+                            <input type="text" name="name_bn" value="{{old('name_bn')}}" class="form-control" id="projectNameBangla" placeholder="Enter Project Name">
+                            <span class="text-danger">{{ $errors->first('name_bn') }}</span>
                         </div>
                         <!-- /.form-group -->
                     </div>
                     <!-- /.col -->
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label>Multiple</label>
-                            <select class="select2" multiple="multiple" data-placeholder="Select a State" style="width: 100%;">
-                                <option>Alabama</option>
-                                <option>Alaska</option>
-                                <option>California</option>
-                                <option>Delaware</option>
-                                <option>Tennessee</option>
-                                <option>Texas</option>
-                                <option>Washington</option>
-                            </select>
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
                         </div>
                         <!-- /.form-group -->
                         <div class="form-group">
-                            <label>Disabled Result</label>
-                            <select class="form-control select2" style="width: 100%;">
-                                <option selected="selected">Alabama</option>
-                                <option>Alaska</option>
-                                <option disabled="disabled">California (disabled)</option>
-                                <option>Delaware</option>
-                                <option>Tennessee</option>
-                                <option>Texas</option>
-                                <option>Washington</option>
-                            </select>
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
                         </div>
                         <!-- /.form-group -->
                     </div>
@@ -99,38 +69,59 @@
                 </div>
                 <!-- /.row -->
 
-                <h5>Custom Color Variants</h5>
+
                 <div class="row">
-                    <div class="col-12 col-sm-6">
+                    <div class="col-md-6">
                         <div class="form-group">
-                            <label>Minimal (.select2-danger)</label>
-                            <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" style="width: 100%;">
-                                <option selected="selected">Alabama</option>
-                                <option>Alaska</option>
-                                <option>California</option>
-                                <option>Delaware</option>
-                                <option>Tennessee</option>
-                                <option>Texas</option>
-                                <option>Washington</option>
-                            </select>
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                        </div>
+                        <!-- /.form-group -->
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
                         </div>
                         <!-- /.form-group -->
                     </div>
                     <!-- /.col -->
-                    <div class="col-12 col-sm-6">
+                    <div class="col-md-6">
                         <div class="form-group">
-                            <label>Multiple (.select2-purple)</label>
-                            <div class="select2-purple">
-                                <select class="select2" multiple="multiple" data-placeholder="Select a State" data-dropdown-css-class="select2-purple" style="width: 100%;">
-                                    <option>Alabama</option>
-                                    <option>Alaska</option>
-                                    <option>California</option>
-                                    <option>Delaware</option>
-                                    <option>Tennessee</option>
-                                    <option>Texas</option>
-                                    <option>Washington</option>
-                                </select>
-                            </div>
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                        </div>
+                        <!-- /.form-group -->
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                        </div>
+                        <!-- /.form-group -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                        </div>
+                        <!-- /.form-group -->
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                        </div>
+                        <!-- /.form-group -->
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                        </div>
+                        <!-- /.form-group -->
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
                         </div>
                         <!-- /.form-group -->
                     </div>

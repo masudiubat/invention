@@ -81,8 +81,16 @@
                             <ul>
                                 <li class="{{ request()->routeIs('home*') ? 'active' : '' }}"><a href="{{route('home.index')}}">{{trans('header.home')}}</a></li>
                                 <li class="{{ request()->routeIs('about*') ? 'active' : '' }}"><a href="{{route('about.index')}}">{{trans('header.about')}}</a></li>
-                                <li class="{{ request()->routeIs('service*') ? 'active' : '' }}"><a href="{{route('service.index')}}">{{trans('header.service')}}</a></li>
-                                <li class="{{ request()->routeIs('project*') ? 'active' : '' }}"><a href="{{route('project.index')}}">{{trans('header.project')}}</a></li>
+                                <li class="{{ request()->routeIs('service*') ? 'active' : '' }}"><a href="#">{{trans('header.services')}} <i class="fa fa-angle-double-down"></i></a>
+                                    <ul class="service_items" id="service_item">
+
+                                    </ul>
+                                </li>
+                                <li class="{{ request()->routeIs('project*') ? 'active' : '' }}"><a href="#">{{trans('header.projects')}} <i class="fa fa-angle-double-down"></i></a>
+                                    <ul class="project_items">
+
+                                    </ul>
+                                </li>
                                 <li class="{{ request()->routeIs('gallery*') ? 'active' : '' }}"><a href="{{route('gallery.index')}}">{{trans('header.gallery')}}</a></li>
                                 <li class="{{ request()->routeIs('blog*') ? 'active' : '' }}"><a href="{{route('blog.index')}}">{{trans('header.blog')}}</a></li>
                                 <li class="{{ request()->routeIs('career*') ? 'active' : '' }}"><a href="{{route('career.index')}}">{{trans('header.career')}}</a></li>
@@ -106,8 +114,16 @@
                         <ul>
                             <li class="{{ request()->routeIs('home*') ? 'active' : '' }}"><a href="{{route('home.index')}}">{{trans('header.home')}}</a></li>
                             <li class="{{ request()->routeIs('about*') ? 'active' : '' }}"><a href="{{route('about.index')}}">{{trans('header.about')}}</a></li>
-                            <li class="{{ request()->routeIs('service*') ? 'active' : '' }}"><a href="{{route('service.index')}}">{{trans('header.service')}}</a></li>
-                            <li class="{{ request()->routeIs('project*') ? 'active' : '' }}"><a href="{{route('project.index')}}">{{trans('header.project')}}</a></li>
+                            <li class="{{ request()->routeIs('service*') ? 'active' : '' }}"><a href="#">{{trans('header.services')}} <i class="fa fa-angle-double-down"></i></a>
+                                <ul class="service_items">
+
+                                </ul>
+                            </li>
+                            <li class="{{ request()->routeIs('project*') ? 'active' : '' }}"><a href="#">{{trans('header.projects')}} <i class="fa fa-angle-double-down"></i></a>
+                                <ul class="project_items">
+
+                                </ul>
+                            </li>
                             <li class="{{ request()->routeIs('gallery*') ? 'active' : '' }}"><a href="{{route('gallery.index')}}">{{trans('header.gallery')}}</a></li>
                             <li class="{{ request()->routeIs('blog*') ? 'active' : '' }}"><a href="{{route('blog.index')}}">{{trans('header.blog')}}</a></li>
                             <li class="{{ request()->routeIs('career*') ? 'active' : '' }}"><a href="{{route('career.index')}}">{{trans('header.career')}}</a></li>

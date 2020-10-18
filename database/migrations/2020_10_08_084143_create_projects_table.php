@@ -16,6 +16,7 @@ class CreateProjectsTable extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id')->index();
+            $table->unsignedBigInteger('project_type_id')->index();
             $table->string('name_en');
             $table->string('name_bn');
             $table->string('slug');
@@ -35,6 +36,7 @@ class CreateProjectsTable extends Migration
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('project_type_id')->references('id')->on('project_types');
         });
     }
 

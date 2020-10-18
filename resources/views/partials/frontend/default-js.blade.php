@@ -46,4 +46,41 @@
     });
 </script>
 
+
+<script>
+    $(function() {
+        var url = "{{url('/menu-items')}}";
+        $.ajax({
+            url: url,
+            method: "GET",
+        }).done(function(data) {
+            var language = sessionStorage.getItem("selectedLanguage");
+
+            var $service_items = $('.service_items');
+            var $project_items = $('.project_items');
+
+            $service_items.empty();
+            $project_items.empty();
+
+            if (language == 'en') {
+                for (var i = 0; i < data.services.length; i++) {
+                    $service_items.append('<li><a href="{{url("service/show")}}/' + data.services[i]['id'] + '">' + data.services[i]['name_en'] + '</a></li>');
+                }
+                for (var j = 0; j < data.projectTypes.length; j++) {
+                    $project_items.append('<li><a href="{{url("project/type/show")}}/' + data.projectTypes[j]['id'] + '">' + data.projectTypes[j]['name_en'] + '</a></li>');
+                }
+
+            } else {
+                for (var i = 0; i < data.services.length; i++) {
+                    $service_items.append('<li><a href="{{url("service/show")}}/' + data.services[i]['id'] + '">' + data.services[i]['name_bn'] + '</a></li>');
+                }
+                for (var j = 0; j < data.projectTypes.length; j++) {
+                    $project_items.append('<li><a href="{{url("project/type/show")}}/' + data.projectTypes[j]['id'] + '">' + data.projectTypes[j]['name_bn'] + '</a></li>');
+                }
+            }
+
+        });
+    });
+</script>
+
 @stack('js')

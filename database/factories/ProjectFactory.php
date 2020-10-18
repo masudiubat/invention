@@ -24,6 +24,7 @@ class ProjectFactory extends Factory
     {
         return [
             'user_id' => $this->faker->numberBetween(1, 5),
+            'project_type_id' => $this->faker->numberBetween(1, 6),
             'name_en' => $name = $this->faker->company,
             'name_bn' => $name,
             'slug' => Str::slug($name),
