@@ -11,15 +11,52 @@
 
 @section('content')
 <div class="row">
-    <div class="col-md-12">
+    <div class="offset-md-1 col-md-10">
         <!-- Default box -->
         <div class="card card-solid">
+            <div class="card-header">
+                <h3 class="card-title">Project Details</h3>
+
+                <div class="card-tools">
+                    <ul class="pagination pagination-sm float-right">
+                        <li class="page-item">
+                            <a href="{{route('admin.adproject.index')}}" title="Back" data-placement="top" data-toggle="tooltip" data-original-title="Back" class="btn btn-info btn-xs tooltips">
+                                <i class="fa fa-list" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="page-item"> &nbsp; </li>
+                        <li class="page-item">
+                            <a href="{{route('admin.adproject.create')}}" title="New Project" data-placement="top" data-toggle="tooltip" data-original-title="New Project" class="btn btn-success btn-xs tooltips">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="page-item"> &nbsp; </li>
+                        <li class="page-item">
+                            <a href="{{route('admin.adproject.edit', $project->id)}}" title="Edit" data-placement="top" data-toggle="tooltip" data-original-title="Edit" class="btn btn-info btn-xs tooltips">
+                                <i class="fa fa-edit" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="page-item"> &nbsp; </li>
+                        <li class="page-item">
+                            <a href="#" title="Delete Customer" data-placement="top" data-toggle="tooltip" data-original-title="Delete Customer" class="btn btn-danger btn-xs tooltips">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </a>
+                            <form id="delete-project" action="#" method="POST" style="display: none;">
+                                @csrf
+                                @method('DELETE')
+                            </form>
+                        </li>
+                        <li class="page-item"></li>
+                    </ul>
+                </div>
+            </div>
+
             <div class="card-body">
                 <div class="row">
-                    <div class="col-12 col-sm-6">
+                    <div class="col-md-12 col-sm-12">
                         <h3 class="d-inline-block d-sm-none">LOWA Men’s Renegade GTX Mid Hiking Boots Review</h3>
                         <div class="col-12">
-                            <img src="{{ asset('storage/cover-photos/'. $project->cover_image)}}" class="product-image" alt="Product Image">
+                            <img src="{{ asset('storage/cover-photos/'. $project->cover_image)}}" style="height:515px" class="product-image" alt="Product Image">
                         </div>
                         <div class="col-12 product-image-thumbs">
                             <div class="product-image-thumb active"><img src="{{ asset('storage/cover-photos/'. $project->cover_image)}}" alt="Product Image"></div>
@@ -30,98 +67,66 @@
                             @endif
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6">
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">Details</h3>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Project Name</th>
+                                    <th>{{ $project->name_en }}</th>
+                                </tr>
+                                <tr>
+                                    <th>প্রকল্পের নাম</th>
+                                    <th>{{ $project->name_bn }}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Owner Name</td>
+                                    <td>{{ $project->client_name_en }} </td>
+                                </tr>
+                                <tr>
+                                    <td>মালিকের নাম</td>
+                                    <td>{{ $project->client_name_bn }} </td>
+                                </tr>
+                                <tr>
+                                    <td>Address</td>
+                                    <td>{{ $project->address_en }} </td>
+                                </tr>
+                                <tr>
+                                    <td>ঠিকানা</td>
+                                    <td>{{ $project->address_bn }} </td>
+                                </tr>
+                                <tr>
+                                    <td>Area</td>
+                                    <td>{{ $project->area_en }} Square feet </td>
+                                </tr>
+                                <tr>
+                                    <td>আয়তন</td>
+                                    <td>{{ $project->area_bn }} স্কোয়ার ফিট</td>
+                                </tr>
+                                <tr>
+                                    <td>Cost</td>
+                                    <td>{{ $project->cost_en }} Almost taka</td>
+                                </tr>
+                                <tr>
+                                    <td>খরচ</td>
+                                    <td>{{ $project->cost_bn }} টাকা প্রায়</td>
+                                </tr>
+                                <tr>
+                                    <td>Start Date</td>
+                                    <td>{{ date('d-m-Y', strtotime($project->started_at))  }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Status</td>
+                                    <td>{{ $project->status }}</td>
+                                </tr>
 
-                                <div class="card-tools">
-                                    <ul class="pagination pagination-sm float-right">
-                                        <li class="page-item">
-                                            <a href="{{route('admin.adproject.index')}}" title="Back" data-placement="top" data-toggle="tooltip" data-original-title="Back" class="btn btn-success tooltips">
-                                                <i class="fa fa-list" aria-hidden="true"></i>
-                                            </a>
-                                        </li>
-                                        <li class="page-item"> &nbsp; </li>
-                                        <li class="page-item">
-                                            <a href="{{route('admin.adproject.edit', $project->id)}}" title="Edit" data-placement="top" data-toggle="tooltip" data-original-title="Edit" class="btn btn-success tooltips">
-                                                <i class="fa fa-edit" aria-hidden="true"></i>
-                                            </a>
-                                        </li>
-                                        <li class="page-item"> &nbsp; </li>
-                                        <li class="page-item">
-                                            <a href="#" title="Delete Customer" data-placement="top" data-toggle="tooltip" data-original-title="Delete Customer" class="btn btn-danger tooltips">
-                                                <i class="fa fa-times" aria-hidden="true"></i>
-                                            </a>
-                                            <form id="delete-project" action="#" method="POST" style="display: none;">
-                                                @csrf
-                                                @method('DELETE')
-                                            </form>
-                                        </li>
-                                        <li class="page-item"></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- /.card-header -->
-                            <div class="card-body p-0">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Project Name</th>
-                                            <th>{{ $project->name_en }}</th>
-                                        </tr>
-                                        <tr>
-                                            <th>প্রকল্পের নাম</th>
-                                            <th>{{ $project->name_bn }}</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Owner Name</td>
-                                            <td>{{ $project->client_name_en }} </td>
-                                        </tr>
-                                        <tr>
-                                            <td>মালিকের নাম</td>
-                                            <td>{{ $project->client_name_bn }} </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Address</td>
-                                            <td>{{ $project->address_en }} </td>
-                                        </tr>
-                                        <tr>
-                                            <td>ঠিকানা</td>
-                                            <td>{{ $project->address_bn }} </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Area</td>
-                                            <td>{{ $project->area_en }} Square feet </td>
-                                        </tr>
-                                        <tr>
-                                            <td>আয়তন</td>
-                                            <td>{{ $project->area_bn }} স্কোয়ার ফিট</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cost</td>
-                                            <td>{{ $project->cost_en }} Almost taka</td>
-                                        </tr>
-                                        <tr>
-                                            <td>খরচ</td>
-                                            <td>{{ $project->cost_bn }} টাকা প্রায়</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Start Date</td>
-                                            <td>{{ date('d-m-Y', strtotime($project->started_at))  }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Status</td>
-                                            <td>{{ $project->status }}</td>
-                                        </tr>
-
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- /.card-body -->
-                        </div>
+                            </tbody>
+                        </table>
 
                     </div>
                 </div>

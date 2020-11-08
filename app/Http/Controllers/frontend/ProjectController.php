@@ -29,4 +29,11 @@ class ProjectController extends Controller
         // echo "Got this " . $id;
         return view('pages.frontend.projectDetails');
     }
+
+    public function show_client_list()
+    {
+        $clients = Project::paginate(12);
+
+        return view('pages.frontend.client.index', compact('clients'));
+    }
 }

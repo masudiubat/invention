@@ -25,7 +25,7 @@
     <div class="header-navbar">
         <div class="container">
             <div class="row">
-                <div class="col-md-2 col-sm-12 col-xs-12">
+                <div class="col-md-1 col-sm-12 col-xs-12">
                     <div class="header-logo">
                         <a href="{{route('home.index')}}">
                             <img src="{{ asset('assets/frontend/images/logo/logo-v1.png')}}" alt="" />
@@ -35,12 +35,12 @@
                 <div class="col-md-2 col-sm-12 col-xs-12">
                     <div class="submit-property">
                         <select name="local" class="btn-b submit-btn localization" id="localization">
-                            @if(Session::has('locale') && Session::get('locale') == 'bn')
-                            <option id="english" value="en">English</option>
-                            <option id="bangla" value="bn" selected>বাংলা</option>
-                            @else
+                            @if(Session::has('locale') && Session::get('locale') == 'en')
                             <option id="english" value="en" selected>English</option>
                             <option id="bangla" value="bn">বাংলা</option>
+                            @else
+                            <option id="english" value="en">English</option>
+                            <option id="bangla" value="bn" selected>বাংলা</option>
                             @endif
 
                         </select>
@@ -74,7 +74,7 @@
 
                     </div>
                 </div>
-                <div class="col-md-8 col-sm-12 col-xs-12">
+                <div class="col-md-9 col-sm-12 col-xs-12">
                     <div class="phone-menu"><i class="fa fa-bars show-menu"></i></div>
                     <div class="main-menu text-center">
                         <nav>
@@ -91,6 +91,7 @@
 
                                     </ul>
                                 </li>
+                                <li class="{{ request()->routeIs('client*') ? 'active' : '' }}"><a href="{{route('client.index')}}">{{trans('header.client')}}</a></li>
                                 <li class="{{ request()->routeIs('gallery*') ? 'active' : '' }}"><a href="{{route('gallery.index')}}">{{trans('header.gallery')}}</a></li>
                                 <li class="{{ request()->routeIs('blog*') ? 'active' : '' }}"><a href="{{route('blog.index')}}">{{trans('header.blog')}}</a></li>
                                 <li class="{{ request()->routeIs('career*') ? 'active' : '' }}"><a href="{{route('career.index')}}">{{trans('header.career')}}</a></li>
@@ -124,6 +125,7 @@
 
                                 </ul>
                             </li>
+                            <li class="{{ request()->routeIs('client*') ? 'active' : '' }}"><a href="{{route('client.index')}}">{{trans('header.client')}}</a></li>
                             <li class="{{ request()->routeIs('gallery*') ? 'active' : '' }}"><a href="{{route('gallery.index')}}">{{trans('header.gallery')}}</a></li>
                             <li class="{{ request()->routeIs('blog*') ? 'active' : '' }}"><a href="{{route('blog.index')}}">{{trans('header.blog')}}</a></li>
                             <li class="{{ request()->routeIs('career*') ? 'active' : '' }}"><a href="{{route('career.index')}}">{{trans('header.career')}}</a></li>

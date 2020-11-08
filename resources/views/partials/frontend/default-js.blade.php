@@ -30,12 +30,7 @@
     $('#localization').change(function() {
         var localization = $('#localization').val();
         var url = "{{url('/locale')}}/" + localization;
-        // Check browser support
-        if (typeof(Storage) !== "undefined") {
-            sessionStorage.clear();
-            // Store
-            sessionStorage.setItem("selectedLanguage", localization);
-        }
+        
         $.ajax({
             url: url,
             method: "GET",
@@ -54,7 +49,9 @@
             url: url,
             method: "GET",
         }).done(function(data) {
-            var language = sessionStorage.getItem("selectedLanguage");
+            var language = $('#localization').val();
+			
+			console.log(language);
 
             var $service_items = $('.service_items');
             var $project_items = $('.project_items');

@@ -4,4 +4,7 @@
 <!-- AdminLTE App -->
 <script src="{{asset('assets/admin/dist/js/adminlte.min.js')}}"></script>
 
+<script src="{{asset('assets/admin/js/toastr.min.js')}}"></script>
+{!! Toastr::message() !!}
+
 @stack('js')

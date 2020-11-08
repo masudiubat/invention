@@ -17,6 +17,7 @@ return [
     'public' => 'Public',
     'urban' => 'Urban',
     'interiors' => 'Interiors',
+    'client' => 'Clients',
     'gallery' => 'Gallery',
     'blog' => 'Blog',
     'career' => 'Career',

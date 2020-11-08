@@ -12,7 +12,8 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
 <!-- summernote -->
 <link rel="stylesheet" href="{{ asset('assets/admin/plugins/summernote/summernote-bs4.css')}}">
-<link href="{{ asset('assets/admin/css/fileinput.css')}}" media="all" rel="stylesheet" type="text/css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.0.1/min/dropzone.min.css" rel="stylesheet">
+
 <link rel="stylesheet" href="{{ asset('assets/admin/custom-style.css')}}">
 @endpush
 
@@ -25,15 +26,31 @@
                 <h3 class="card-title">Add New Project</h3>
 
                 <div class="card-tools">
-                    <a href="{{route('admin.adproject.index')}}" title="Back" data-placement="top" data-toggle="tooltip" data-original-title="Back" class="btn btn-success tooltips">
+                    <a href="{{route('admin.adproject.index')}}" title="Project List" data-placement="top" data-toggle="tooltip" data-original-title="Project List" class="btn btn-success btn-xs tooltips">
                         <i class="fa fa-list" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
-            <form id="form" action="{{ route('admin.adproject.store')}}" method="POST" enctype="multipart/form-data">
+            <form files="true" class='dropzone' , id='image-upload' action="{{ route('admin.adproject.store')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <!-- /.card-header -->
                 <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group has-success {{ $errors->has('project_type') ? 'has-error' : '' }}">
+                                <label for="projectType">Project Category<span class="text-danger"> * </span></label>
+                                <select class="form-control" id="projectTypeName" name="project-type">
+                                    <option>Select Project Category</option>
+                                    @if(!$projectTypes->isEmpty())
+                                    @foreach($projectTypes as $projectType)
+                                    <option value="{{ $projectType->id }}">{{ $projectType->name_en }}</option>
+                                    @endforeach
+                                    @endif
+                                </select>
+                                <span class="text-danger">{{ $errors->first('project-type') }}</span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group has-success {{ $errors->has('name_en') ? 'has-error' : '' }}">
@@ -141,6 +158,7 @@
                         <!-- /.col -->
                     </div>
                     <!-- /.row -->
+
                 </div>
                 <!-- /.card-body -->
         </div>
@@ -214,16 +232,39 @@
                 <div class="mb-3">
                     <div class="form-group has-success">
                         <div class="file-loading">
-                            <input id="file-1" type="file" name="file[]" multiple class="file" data-overwrite-initial="false" data-min-file-count="1">
+                            <input id="file-1" type="file" name="file" multiple class="file" data-overwrite-initial="false" data-min-file-count="2">
                         </div>
                     </div>
                 </div>
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
     </div>
     <!-- /.col-->
 </div>
 <!-- ./row -->
+
 
 <div class="row">
     <div class="col-md-12">
@@ -254,9 +295,30 @@
 <script src="{{ asset('assets/admin/dist/js/demo.js')}}"></script>
 <!-- Summernote -->
 <script src="{{ asset('assets/admin/plugins/summernote/summernote-bs4.min.js')}}"></script>
-<script src="{{ asset('assets/admin/js/fileinput.js')}}" type="text/javascript"></script>
-<script src="{{ asset('assets/admin/js/theme.js')}}" type="text/javascript"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" type="text/javascript"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.2.0/min/dropzone.min.js"></script>
+
+<script type="text/javascript">
+    Dropzone.options.dropzone = {
+        maxFilesize: 10,
+        renameFile: function(file) {
+            var dt = new Date();
+            var time = dt.getTime();
+            return time + file.name;
+        },
+        acceptedFiles: ".jpeg,.jpg,.png,.gif",
+        addRemoveLinks: true,
+        timeout: 60000,
+        success: function(file, response) {
+            console.log(response);
+        },
+        error: function(file, response) {
+            return false;
+        }
+    };
+</script>
 
 <script type="text/javascript">
     $('.date').datepicker({
@@ -271,27 +333,4 @@
     })
 </script>
 
-<script type="text/javascript">
-    $("#file-1").fileinput({
-
-        theme: 'fa',
-
-        uploadUrl: "{{route('admin.adproject.store')}}",
-
-        allowedFileExtensions: ['jpg', 'png', 'gif'],
-
-        overwriteInitial: false,
-
-        maxFileSize: 2000,
-
-        maxFilesNum: 10,
-
-        slugCallback: function(filename) {
-
-            return filename.replace('(', '_').replace(']', '_');
-
-        }
-
-    });
-</script>
 @endpush

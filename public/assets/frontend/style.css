@@ -217,16 +217,16 @@ button:active {
     clear: both;
 }
 ::-moz-selection {
-    background: #00abec;
+    background: #ff8c00;
     text-shadow: none;
 }
 ::selection {
-    background: #00abec;
+    background: #ff8c00;
     text-shadow: none;
 }
 .browserupgrade {
     margin: 26px 0;
-    background: #00abec;
+    background: #ff8c00;
     color: #fff;
     padding: 26px 0;
 }
@@ -265,7 +265,7 @@ button:active {
     font-size: 18px;
 }
 .banner-area .banner-content ul > li a span {
-    color: #00abec;
+    color: #ff8c00;
 }
 /*owl carousel pagination customize*/
 .owl-theme .owl-pagination {
@@ -489,7 +489,7 @@ header .header-top .top-social li a {
     color: #666666;
 }
 header .header-top .top-social li a:hover {
-    color: #00abec;
+    color: #ff8c00;
 }
 header .header-navbar .header-logo img {
     padding-top: 5px;
@@ -514,18 +514,18 @@ header .header-v3 .header-navbar .phone-menu i {
     color: #fff;
 }
 header .header-v1 .header-navbar .main-menu nav ul > li > a:hover {
-    color: #00abec;
+    color: #ff8c00;
 }
 header .header-v1 .header-navbar .main-menu nav ul > li.active > a {
-    border-color: #00abec;
-    color: #00abec;
+    border-color: #ff8c00;
+    color: #ff8c00;
 }
 header .header-v1 .header-navbar .main-menu nav ul > li > ul {
-    background: #00abec;
+    background: #ff8c00;
     margin-top: 4px;
 }
 header .header-v1 .header-navbar .main-menu nav ul > li > ul > li:hover {
-    background: #00abec;
+    background: #ff8c00;
 }
 header .header-v1 .header-navbar .main-menu nav ul > li > a {
     padding: 33px 15px 36px 15px;
@@ -535,13 +535,13 @@ header .header-navbar .submit-property .submit-btn {
     text-transform: uppercase;
     line-height: 86px;
     font-family: "Montserrat", sans-serif;
-    background-color: #00abec;
+    background-color: #ff8c00;
     cursor: pointer;
     transform: all 0.5s ease 0s;
     margin-top: 25px;
 }
 header .header-navbar .submit-property .submit-btn:hover {
-    background: #00abec;
+    background: #ff8c00;
 }
 header .header-navbar .submit-property .submit-form {
     position: absolute;
@@ -749,11 +749,11 @@ header .header-v3 .header-navbar .main-menu nav ul > li > a:before {
     content: "";
 }
 header .header-v3 .header-navbar .main-menu nav ul > li:hover > a {
-    color: #00abec;
-    border: 1px solid #00abec;
+    color: #ff8c00;
+    border: 1px solid #ff8c00;
 }
 header .header-v3 .header-navbar .main-menu nav ul > li > ul {
-    background: #00abec;
+    background: #ff8c00;
 }
 header .header-v3 .header-navbar .main-menu nav ul > li > ul > li {
     transition: all 0.5s ease 0s;
@@ -762,7 +762,7 @@ header .header-v3 .header-navbar .main-menu nav ul > li > ul > li:hover {
     background-color: #0385b7;
 }
 header .login-btn a {
-    background-color: #00abec;
+    background-color: #ff8c00;
     line-height: 86px;
 }
 header .login-btn a:hover {
@@ -803,7 +803,7 @@ header .login-btn a:hover {
     padding-top: 25%;
 }
 .slider-area .slider-home1 .slider-item .content-area .slider-content h1 {
-    color: #00abec;
+    color: #ff8c00;
     margin: 0 0 10px;
 }
 .slider-area .slider-home1 .slider-item .content-area .slider-content h1.larg {
@@ -814,10 +814,10 @@ header .login-btn a:hover {
     letter-spacing: 1px;
 }
 .slider-area .slider-home1 .slider-item .content-area .slider-content a {
-    background-color: #00abec;
+    background-color: #ff8c00;
 }
 .slider-area .slider-home1 .slider-item .content-area .slider-content a:hover {
-    background-color: #00abec;
+    background-color: #ff8c00;
 }
 /*Home one slider pagination customize*/
 .slider-area .owl-theme .owl-pagination {
@@ -826,11 +826,11 @@ header .login-btn a:hover {
 }
 .slider-area .owl-theme .owl-controls .owl-page.active span,
 .slider-area .owl-theme .owl-controls.clickable .owl-page:hover span {
-    background: #00abec !important;
+    background: #ff8c00 !important;
 }
 .slider-area .owl-pagination .owl-page.active span:before,
 .slider-area .owl-theme .owl-controls.clickable .owl-page:hover span:before {
-    border: 2px solid #00abec;
+    border: 2px solid #ff8c00;
 }
 /*....................................
 3.2 Home-v2 silder area start here
@@ -962,10 +962,10 @@ header .login-btn a:hover {
 .filter-area.filter-v1 .box .search-btn a {
     width: 100%;
     margin: 0px 0px 0px;
-    background-color: #00abec;
+    background-color: #ff8c00;
 }
 .filter-area.filter-v1 .box .search-btn a:hover {
-    background-color: #00abec;
+    background-color: #ff8c00;
 }
 .filter-area.filter-v1 .filter-box-shadow {
     width: 100%;
@@ -1041,7 +1041,7 @@ header .login-btn a:hover {
     border-radius: 0;
 }
 .filter-v1 .ui-widget-header {
-    background-color: #00abec;
+    background-color: #ff8c00;
 }
 /*....................................
 4.2 Home-v3 filter area start here 
@@ -1095,10 +1095,10 @@ header .login-btn a:hover {
     font-size: 18px;
     width: 100%;
     border-radius: 0;
-    background-color: #00abec;
+    background-color: #ff8c00;
 }
 .filter-area.filter-v3 .box .search-btn a:hover {
-    background-color: #0385b7;
+    background-color: #ff8c00;
 }
 /* Select bootstrap*/
 .filter-v3 .btn-group > .btn {
@@ -1152,7 +1152,7 @@ header .login-btn a:hover {
 }
 .filter-v3 .ui-widget-content .ui-state-default {
     border: none;
-    background: #00abec;
+    background: #ff8c00;
 }
 .filter-v3 .ui-widget-header {
     background-color: #333;
@@ -1165,7 +1165,7 @@ header .login-btn a:hover {
 ....................................*/
 
 .properties-area h3 span {
-    color: #00abec;
+    color: #ff8c00;
 }
 .properties-area .properties-image {
     margin-bottom: 30px;
@@ -1211,7 +1211,7 @@ header .login-btn a:hover {
 5.2 Home-v3 feature properties area start here
 ....................................*/
 .properties-area.properties-v3 h2 > span {
-    color: #00abec;
+    color: #ff8c00;
 }
 .properties-area.properties-v3 .feature-slider {
     margin: auto;
@@ -1236,7 +1236,7 @@ header .login-btn a:hover {
     height: 50px;
     width: 22px;
     transform: rotate(-24deg);
-    background-color: #00abec;
+    background-color: #ff8c00;
 }
 .properties-area.properties-v3
     .feature-slider
@@ -1248,7 +1248,7 @@ header .login-btn a:hover {
     font-weight: 300;
     font-size: 18px;
     color: #fff;
-    background-color: #00abec;
+    background-color: #ff8c00;
     padding: 8px 35px;
     letter-spacing: 1px;
     display: inline-block;
@@ -1338,7 +1338,7 @@ header .login-btn a:hover {
     .owl-controls.clickable
     .owl-page:hover
     span {
-    background: #00abec !important;
+    background: #ff8c00 !important;
 }
 .properties-area.properties-v3 .owl-pagination .owl-page.active span:before,
 .properties-area.properties-v3
@@ -1346,7 +1346,7 @@ header .login-btn a:hover {
     .owl-controls.clickable
     .owl-page:hover
     span:before {
-    border: 2px solid #00abec;
+    border: 2px solid #ff8c00;
 }
 /*....................................
 6. Recent properties area start here
@@ -1358,7 +1358,7 @@ header .login-btn a:hover {
     position: relative;
 }
 .recent-properties-area h3 span {
-    color: #00abec;
+    color: #ff8c00;
 }
 .recent-properties-area
     .properties-slider
@@ -1445,7 +1445,7 @@ header .login-btn a:hover {
     .item-single
     .content-properties
     a:hover {
-    color: #00abec;
+    color: #ff8c00;
 }
 /*owl carousel navigation customize*/
 .recent-properties-area .owl-theme .owl-buttons {
@@ -1464,7 +1464,7 @@ header .login-btn a:hover {
 }
 .recent-properties-area .owl-theme .owl-buttons .owl-prev:hover:before,
 .recent-properties-area .owl-theme .owl-buttons .owl-next:hover:before {
-    background: #00abec;
+    background: #ff8c00;
     color: #fff;
 }
 /*....................................
@@ -1601,7 +1601,7 @@ header .login-btn a:hover {
 6.3 Property details area start here
 ....................................*/
 .property-details-area i {
-    color: #00abec;
+    color: #ff8c00;
 }
 .property-details-area .content-details-one {
     position: relative;
@@ -1638,19 +1638,19 @@ header .login-btn a:hover {
     font-weight: 500;
 }
 .property-details-area .content-details-one .last-details a {
-    background-color: #00abec;
+    background-color: #ff8c00;
 }
 .property-details-area .content-details-one .last-details a:hover {
-    background-color: #00abec;
+    background-color: #ff8c00;
 }
 .property-details-area .booknow-btn {
     margin: 26px 0 0;
 }
 .property-details-area .booknow-btn a {
-    background-color: #00abec;
+    background-color: #ff8c00;
 }
 .property-details-area .booknow-btn a:hover {
-    background-color: #00abec;
+    background-color: #ff8c00;
 }
 .property-more-area h4 {
     font-family: "Roboto", sans-serif;
@@ -1810,7 +1810,7 @@ header .login-btn a:hover {
 .single-more .featured-details strong {
     font-size: 20px;
     font-weight: 400;
-    color: #00abec;
+    color: #ff8c00;
 }
 /*slick slider */
 .property-details-area .slick-list {
@@ -1834,13 +1834,13 @@ header .login-btn a:hover {
     width: 40px;
     height: 40px;
     font-size: 0;
-    color: #00abec;
+    color: #ff8c00;
     transition: all 0.5s ease 0s;
     z-index: 99;
 }
 .property-details-area .photo-slider button:hover {
-    background-color: #00abec;
-    border: 1px solid #00abec;
+    background-color: #ff8c00;
+    border: 1px solid #ff8c00;
 }
 .property-details-area .photo-slider .slick-next {
     right: 0;
@@ -1881,7 +1881,7 @@ header .login-btn a:hover {
 }
 
 .property-list-area h3 span {
-    color: #00abec;
+    color: #ff8c00;
 }
 .property-list-area .property-list-all .search-box {
     margin: 0 0 50px;
@@ -2034,7 +2034,7 @@ header .login-btn a:hover {
     position: relative;
 }
 .property-list-area .property-list-all .filter-bar ul li a.active {
-    background-color: #00abec;
+    background-color: #ff8c00;
     color: #fff;
 }
 .property-list-area .property-list-all .filter-bar ul li a i {
@@ -2073,10 +2073,10 @@ header .login-btn a:hover {
     display: block;
     padding: 8px 0;
     width: 100%;
-    background-color: #00abec;
+    background-color: #ff8c00;
 }
 .single-more .search-btn:hover {
-    background-color: #00abec;
+    background-color: #ff8c00;
 }
 .pagin ul li {
     display: inline-block;
@@ -2100,12 +2100,12 @@ header .login-btn a:hover {
     transition: all 0.5s ease 0s;
 }
 .pagin ul li span:hover {
-    background-color: #00abec;
+    background-color: #ff8c00;
     color: #fff;
 }
 .pagin ul li span.active {
-    border: 1px solid #00abec;
-    color: #00abec;
+    border: 1px solid #ff8c00;
+    color: #ff8c00;
 }
 .pagin ul li span.active:hover {
     color: #fff;
@@ -2129,10 +2129,10 @@ header .login-btn a:hover {
 }
 .single-more .ui-widget-content .ui-state-default {
     border: none;
-    background: #00abec;
+    background: #ff8c00;
 }
 .single-more .ui-widget-header {
-    background: #00abec;
+    background: #ff8c00;
 }
 /*....................................
 7. Amazing Featurs area start here
@@ -2163,7 +2163,7 @@ header .login-btn a:hover {
     letter-spacing: 1px;
 }
 .feature-area .feature-content h3 span {
-    color: #00abec;
+    color: #ff8c00;
 }
 .feature-area .feature-content h4 {
     font-weight: 500;
@@ -2202,7 +2202,7 @@ header .login-btn a:hover {
     color: #fff;
 }
 .agent-area .agent-header h2 span {
-    color: #00abec;
+    color: #ff8c00;
 }
 .agent-list {
     margin-top: 20px;
@@ -2224,7 +2224,7 @@ header .login-btn a:hover {
     transition: all 0.5s ease 0s;
 }
 .agent-list:hover .agent-image img {
-    border: 1px dashed #00abec;
+    border: 1px dashed #ff8c00;
 }
 .agent-area .agent-list .agent-image figure {
     overflow: hidden;
@@ -2300,7 +2300,7 @@ header .login-btn a:hover {
     display: block;
 }
 .agent-list .content-agent ul li a:hover {
-    background: #00abec;
+    background: #ff8c00;
     color: #fff;
 }
 .agent-list .content-agent ul li a i {
@@ -2314,11 +2314,11 @@ header .login-btn a:hover {
 }
 .agent-area .owl-theme .owl-controls .owl-page.active span,
 .agent-area .owl-theme .owl-controls.clickable .owl-page:hover span {
-    background: #00abec !important;
+    background: #ff8c00 !important;
 }
 .agent-area .owl-pagination .owl-page.active span:before,
 .agent-area .owl-theme .owl-controls.clickable .owl-page:hover span:before {
-    border: 2px solid #00abec;
+    border: 2px solid #ff8c00;
 }
 /*....................................
 8.2 Home-v2 agent area start here
@@ -2405,7 +2405,7 @@ header .login-btn a:hover {
 8.3 Home-v3 agent area start here
 ....................................*/
 .agent-area-v3 h2 span {
-    color: #00abec;
+    color: #ff8c00;
 }
 .agent-area-v3 .agent-list {
     position: relative;
@@ -2453,8 +2453,8 @@ header .login-btn a:hover {
     border: 1px solid #cccccc;
 }
 .agent-area-v3 .agent-list .agent-content ul > li > a:hover {
-    background-color: #00abec;
-    border: 1px solid #00abec;
+    background-color: #ff8c00;
+    border: 1px solid #ff8c00;
 }
 .agent-area-v3 .agent-list .agent-content ul > li > a > i {
     padding-top: 6px;
@@ -2468,6 +2468,7 @@ header .login-btn a:hover {
 .agent-area-page .agent-list {
     background: #f5f5f5;
     margin: 0 0 40px;
+    height: 450px;
 }
 .agent-list .agent-image figure {
     overflow: hidden;
@@ -2683,13 +2684,13 @@ header .login-btn a:hover {
 9.1 Home-v1 testimonial area start here
 ....................................*/
 .testimonial-area h3 span {
-    color: #00abec;
+    color: #ff8c00;
 }
 .testimonial-area.testimonial-v1 .client-content blockquote:before {
     color: #333333;
 }
 .testimonial-area.testimonial-v1 .client-img a.active img {
-    border: 1px solid #00abec;
+    border: 1px solid #ff8c00;
 }
 .testimonial-area.testimonial-v1 .client-img a.active h4,
 .testimonial-area.testimonial-v1 .client-img a.active p {
@@ -2701,7 +2702,7 @@ header .login-btn a:hover {
 }
 .testimonial-area .bx-wrapper .bx-prev:hover:before,
 .testimonial-area .bx-wrapper .bx-next:hover:before {
-    background-color: #00abec;
+    background-color: #ff8c00;
     color: #fff;
 }
 /*....................................
@@ -2839,7 +2840,7 @@ header .login-btn a:hover {
     color: #333;
 }
 .blog-area .single-blog .blog-content a:hover {
-    color: #00abec;
+    color: #ff8c00;
 }
 .blog-area .blog-sidber {
     margin: 0 0 60px;
@@ -2857,14 +2858,14 @@ header .login-btn a:hover {
 .blog-area .blog-sidber form button {
     height: 57px;
     padding: 14px 15px;
-    background: #00abec;
+    background: #ff8c00;
     margin: 0px -16px 0px -8px;
     border-radius: 0 5px 5px 0;
     font-size: 18px;
     color: #fff;
 }
 .blog-area .blog-sidber form button:hover {
-    background-color: #00abec;
+    background-color: #ff8c00;
 }
 .blog-area .blog-sidber .ask-banner {
     background: #f5f5f5;
@@ -2875,7 +2876,7 @@ header .login-btn a:hover {
     padding: 10% 18%;
 }
 .blog-area .blog-sidber .ask-banner a {
-    background: #00abec;
+    background: #ff8c00;
     position: relative;
     display: block;
     padding: 12px 0;
@@ -2885,7 +2886,7 @@ header .login-btn a:hover {
     margin: 0 18%;
 }
 .blog-area .blog-sidber .ask-banner a:hover {
-    background-color: #00abec;
+    background-color: #ff8c00;
 }
 .blog-area .blog-sidber .popular-list {
     display: block;
@@ -2934,7 +2935,7 @@ header .login-btn a:hover {
     color: #666;
 }
 .blog-area .blog-sidber ul li a:hover {
-    color: #00abec;
+    color: #ff8c00;
 }
 .blog-area .blog-sidber .blog-gallery {
     display: inline-block;
@@ -3008,7 +3009,7 @@ header .login-btn a:hover {
 11.2 Home-v3 gallery area start here
 ....................................*/
 .gallery-area.gallery-v3 h2 span {
-    color: #00abec;
+    color: #ff8c00;
 }
 .gallery-area .gallery-block {
     padding: 0;
@@ -3049,7 +3050,7 @@ header .login-btn a:hover {
 12. Partner area start here
 ....................................*/
 .partner-area h2 span {
-    color: #00abec;
+    color: #ff8c00;
 }
 .partner-area .partner-slider .single-partner .partner-image {
     border: 1px solid #ccc;
@@ -3134,7 +3135,7 @@ header .login-btn a:hover {
     color: #444444;
 }
 .about-area .about-content h2 span {
-    color: #00abec;
+    color: #ff8c00;
 }
 .about-area .about-content h4 {
     font-weight: 500;
@@ -3148,11 +3149,11 @@ header .login-btn a:hover {
     margin: 0 0 75px;
 }
 .about-area .about-content a {
-    background-color: #00abec;
+    background-color: #ff8c00;
     padding: 15px 50px;
 }
 .about-area .about-content a:hover {
-    background-color: #00abec;
+    background-color: #ff8c00;
 }
 .about-area .about-image img {
     width: 100%;
@@ -3168,13 +3169,13 @@ header .login-btn a:hover {
     z-index: 999;
 }
 .services-area h3 span {
-    color: #00abec;
+    color: #ff8c00;
 }
 .services-area .services-list span {
     width: 60px;
     height: 60px;
     border-radius: 2px;
-    background-color: #00abec;
+    background-color: #ff8c00;
     display: inline-block;
     color: #fff;
     font-size: 30px;
@@ -3193,7 +3194,7 @@ header .login-btn a:hover {
     letter-spacing: 1px;
 }
 .services-area .services-list a:hover {
-    color: #00abec;
+    color: #ff8c00;
 }
 /*....................................
 16. Skill area start here
@@ -3240,8 +3241,8 @@ header .login-btn a:hover {
     z-index: 999;
 }
 .skill-area .skill-list .skill-count:hover {
-    background-color: #00abec;
-    border: 1px solid #00abec;
+    background-color: #ff8c00;
+    border: 1px solid #ff8c00;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     color: #fff;
 }
@@ -3297,11 +3298,11 @@ header .login-btn a:hover {
     margin: 0 0 30px;
 }
 .mail-to form button {
-    background-color: #00abec;
+    background-color: #ff8c00;
     padding: 8px 40px;
 }
 .mail-to form button:hover {
-    background-color: #00abec;
+    background-color: #ff8c00;
 }
 /*....................................
 13. Subscribe area start here
@@ -3314,7 +3315,7 @@ header .login-btn a:hover {
     overflow: hidden;
 }
 .subscribe-area .subs-content {
-    background-color: #00abec;
+    background-color: #ff8c00;
     width: 100%;
     display: flex;
     height: 125px;
@@ -3335,7 +3336,7 @@ header .login-btn a:hover {
     top: 0;
     right: 0;
     bottom: 0;
-    background: #00abec;
+    background: #ff8c00;
     z-index: 1;
 }
 .subscribe-area .subs-content span:before {
@@ -3346,7 +3347,7 @@ header .login-btn a:hover {
     top: -10px;
     right: -48px;
     bottom: 0;
-    background: #00abec;
+    background: #ff8c00;
     transform: rotate(45deg);
 }
 .subscribe-area form {
@@ -3360,7 +3361,7 @@ header .login-btn a:hover {
     color: #fff;
 }
 .subscribe-area form button {
-    background: #00abec;
+    background: #ff8c00;
     margin-left: -144px;
     padding: 2px 50px;
     margin-bottom: 0;
@@ -3369,7 +3370,7 @@ header .login-btn a:hover {
 }
 .subscribe-area form button:hover {
     color: #fff;
-    background-color: #00abec;
+    background-color: #ff8c00;
 }
 /*....................................
 13.2 Home-v3 subscribe area start here
@@ -3407,9 +3408,9 @@ header .login-btn a:hover {
     color: #333333;
 }
 .subscribe-area-v3 .subscribe-content form button {
-    background-color: #00abec;
+    background-color: #ff8c00;
     margin-left: -128px;
-    border: 1px solid #00abec;
+    border: 1px solid #ff8c00;
     border-radius: 0px 5px 5px 0px;
 }
 .subscribe-area-v3 .subscribe-content form button:hover {
@@ -3493,14 +3494,14 @@ footer .footer-top .footer-properties .prop-list .prop-details h5 a {
     color: #666666;
 }
 footer .footer-top .footer-properties .prop-list .prop-details h5 a:hover {
-    color: #00abec;
+    color: #ff8c00;
 }
 footer .footer-top .footer-properties .prop-list .prop-details p {
     margin: 0;
     font-size: 14px;
 }
 footer .footer-top .footer-properties .prop-list .prop-details strong {
-    color: #00abec;
+    color: #ff8c00;
 }
 footer .footer-top .footer-twitter .twitter-content {
     margin: 0 0 10px;
@@ -3520,7 +3521,7 @@ footer .footer-top .footer-content-area h4 {
     text-transform: uppercase;
 }
 footer .last-v1 {
-    background-color: #00abec;
+    background-color: #ff8c00;
     color: #fff;
 }
 /*....................................
@@ -3637,7 +3638,7 @@ footer .left-footer ul li span {
     transition: all 0.5s ease 0s;
 }
 footer .left-footer ul li:hover span {
-    color: #00abec;
+    color: #ff8c00;
 }
 footer .footer-v3 .footer-link,
 footer .footer-v3 .footer-gallery {
@@ -3661,7 +3662,7 @@ footer .footer-link ul li a {
 }
 footer .footer-link ul li:hover,
 footer .footer-link ul li:hover a {
-    color: #00abec;
+    color: #ff8c00;
 }
 footer .footer-v3 .gallery-footer {
     float: left;
@@ -3669,7 +3670,7 @@ footer .footer-v3 .gallery-footer {
     padding-right: 10px;
 }
 footer .last-v3 {
-    background-color: #00abec;
+    background-color: #ff8c00;
     color: #fff;
 }
 footer .last-v3 ul li {
@@ -3715,11 +3716,11 @@ Custom CSS
 }
 
 .best-area h3 span {
-    color: #00abec;
+    color: #ff8c00;
 }
 
 .blog-area h3 span {
-    color: #00abec;
+    color: #ff8c00;
 }
 
 .recent-properties-area
@@ -3731,7 +3732,7 @@ Custom CSS
 }
 
 .recent-properties-area .properties-slider .properties-slider-item h4 {
-    color: #00abec;
+    color: #ff8c00;
     margin-top: 15px;
 }
 

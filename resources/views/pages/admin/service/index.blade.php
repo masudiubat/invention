@@ -52,10 +52,10 @@
                                     <i class="fa fa-edit" aria-hidden="true"></i>
                                 </a>
 
-                                <a href="#" title="Delete Service" data-placement="top" data-toggle="tooltip" data-original-title="Delete Service" class="btn btn-danger btn-xs tooltips">
+                                <a href="#" onclick="event.preventDefault(); deleteService('{{ $service->id }}');" title="Delete Service" data-placement="top" data-toggle="tooltip" data-original-title="Delete Service" class="btn btn-danger btn-xs tooltips">
                                     <i class="fa fa-times" aria-hidden="true"></i>
                                 </a>
-                                <form id="delete-service" action="#" method="POST" style="display: none;">
+                                <form id="delete-service-{{ $service->id }}" action="{{route('admin.adservice.destroy', $service->id)}}" method="POST" style="display: none;">
                                     @csrf
                                     @method('DELETE')
                                 </form>
@@ -88,6 +88,42 @@
 <script src="{{ asset('assets/admin/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
 <script src="{{ asset('assets/admin/plugins/datatables-responsive/js/dataTables.responsive.min.js')}}"></script>
 <script src="{{ asset('assets/admin/plugins/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
+<script src="{{ asset('assets/admin/js/sweetalert2.min.js')}}"></script>
+<script type="text/javascript">
+    function deleteService(id) {
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: 'btn btn-success',
+                cancelButton: 'btn btn-danger'
+            },
+            buttonsStyling: false
+        })
+
+        swalWithBootstrapButtons.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: 'No, cancel!',
+            reverseButtons: true
+        }).then((result) => {
+            if (result.value) {
+                document.getElementById('delete-service-' + id).submit();
+            } else if (
+                /* Read more about handling dismissals below */
+                result.dismiss === Swal.DismissReason.cancel
+            ) {
+                swalWithBootstrapButtons.fire(
+                    'Cancelled',
+                    'Your imaginary file is safe :)',
+                    'error'
+                )
+            }
+        })
+    }
+</script>
+
 <script>
     $(function() {
         $("#example1").DataTable({

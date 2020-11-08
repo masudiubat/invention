@@ -30,6 +30,8 @@ class ProjectFactory extends Factory
             'slug' => Str::slug($name),
             'client_name_en' => $client = $this->faker->name,
             'client_name_bn' => $client,
+            'client_mobile_en' => $this->faker->numberBetween('01721592088', '01814921385'),
+            'client_mobile_bn' => $this->faker->numberBetween('01721592088', '01814921385'),
             'address_en' => $address = $this->faker->address,
             'address_bn' => $address,
             'area_en' => $area = $this->faker->numberBetween(1000, 2000),

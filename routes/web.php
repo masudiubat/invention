@@ -44,6 +44,7 @@ Route::get('/menu-items', [HomeController::class, 'search_menu_items'])->name('h
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
 Route::get('/service/show/{id}',  [ServiceController::class, 'show'])->name('service.show');
 Route::get('/about', [AboutController::class, 'index'])->name('about.index');
+Route::get('/client', [ProjectController::class, 'show_client_list'])->name('client.index');
 Route::get('/project/type/show/{id}', [ProjectTypeController::class, 'show'])->name('project.type.show');
 Route::get('/project/show/{id}', [ProjectController::class, 'show'])->name('project.show');
 Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index');
@@ -61,20 +62,26 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::group(['as' => 'admin.', 'middleware' => ['auth']], function () {
     Route::get('/adproject', [AdminProjectController::class, 'index'])->name('adproject.index');
     Route::get('/adproject/create', [AdminProjectController::class, 'create'])->name('adproject.create');
+    Route::post('/adproject/store', [AdminProjectController::class, 'store'])->name('adproject.store');
     Route::get('/adproject/show/{id}', [AdminProjectController::class, 'show'])->name('adproject.show');
     Route::get('/adproject/edit/{id}', [AdminProjectController::class, 'edit'])->name('adproject.edit');
-    Route::post('/adproject/store', [AdminProjectController::class, 'store'])->name('adproject.store');
+
 
     Route::get('/adservice', [AdminServiceController::class, 'index'])->name('adservice.index');
     Route::get('/adservice/create', [AdminServiceController::class, 'create'])->name('adservice.create');
+    Route::post('/adservice/store', [AdminServiceController::class, 'store'])->name('adservice.store');
     Route::get('/adservice/show/{id}', [AdminServiceController::class, 'show'])->name('adservice.show');
     Route::get('/adservice/edit/{id}', [AdminServiceController::class, 'edit'])->name('adservice.edit');
-
+    Route::post('/adservice/update/{id}', [AdminServiceController::class, 'update'])->name('adservice.update');
+    Route::delete('/adservice/destroy/{id}', [AdminServiceController::class, 'destroy'])->name('adservice.destroy');
 
     Route::get('/adminproject/type', [AdminProjectTypeController::class, 'index'])->name('adminproject.type.index');
     Route::get('/adminproject/type/create', [AdminProjectTypeController::class, 'create'])->name('adminproject.type.create');
+    Route::post('/adminproject/type/store', [AdminProjectTypeController::class, 'store'])->name('adminproject.type.store');
     Route::get('/adminproject/type/show/{id}', [AdminProjectTypeController::class, 'show'])->name('adminproject.type.show');
     Route::get('/adminproject/type/edit/{id}', [AdminProjectTypeController::class, 'edit'])->name('adminproject.type.edit');
+    Route::post('/adminproject/type/update/{id}', [AdminProjectTypeController::class, 'update'])->name('adminproject.type.update');
+    Route::delete('/adminproject/type/destroy/{id}', [AdminProjectTypeController::class, 'destroy'])->name('adminproject.type.destroy');
 
     Route::get('/adpost', [AdminPostController::class, 'index'])->name('adpost.index');
     Route::get('/adpost/create', [AdminPostController::class, 'create'])->name('adpost.create');

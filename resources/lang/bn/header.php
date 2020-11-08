@@ -17,6 +17,7 @@ return [
     'public' => 'পাবলিক',
     'urban' => 'আরবান',
     'interiors' => 'ইনটেরিওরস',
+    'client' => 'ক্লায়েন্ট',
     'gallery' => 'গ্যালারী',
     'blog' => 'ব্লগ',
     'career' => 'কর্ম',

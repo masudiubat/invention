@@ -22,6 +22,8 @@ class CreateProjectsTable extends Migration
             $table->string('slug');
             $table->string('client_name_en')->nullable();
             $table->string('client_name_bn')->nullable();
+            $table->string('client_mobile_en', 20)->nullable();
+            $table->string('client_mobile_bn', 20)->nullable();
             $table->string('address_en')->nullable();
             $table->string('address_bn')->nullable();
             $table->string('area_en')->nullable();

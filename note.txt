@@ -1,0 +1,12 @@
+Client Module:
+1-11-2020
+
+1.	add client mobile projects table migration
+2.	make seeder
+3.	Update menu items
+4.	add menu items in local file
+5.	add route item
+6.	update projectController
+7.	add client blade
+8.	update style.css file to fix box height
+9.	update clients photos

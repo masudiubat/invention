@@ -14,4 +14,6 @@
 <!-- CSRF Token -->
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
+<link rel="stylesheet" href="{{asset('assets/admin/css/toastr.min.css')}}">
+
 @stack('css')

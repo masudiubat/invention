@@ -16,7 +16,7 @@
                                 <h1>We are offering the</h1>
                                 <h1 class="larg">Best Real Estate Deals</h1>
                                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Proin tellus elit ultricies at semper consectetur felis. Fusce eget ligula ut libero placerat tempor vulputate </p>
-                                <a href="#" class="btn btn-a">More Details</a>
+
                             </div>
                         </div>
                     </div>
@@ -34,7 +34,7 @@
                                 <h1>We Can Seve You</h1>
                                 <h1 class="larg">To Get Your Home</h1>
                                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Proin tellus elit ultricies at semper consectetur felis. Fusce eget ligula ut libero placerat tempor vulputate </p>
-                                <a href="#" class="btn btn-a">Read More</a>
+
                             </div>
                         </div>
                     </div>
@@ -52,7 +52,7 @@
                                 <h1>We are offering the</h1>
                                 <h1 class="larg">Best Real Estate Deals</h1>
                                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Proin tellus elit ultricies at semper consectetur felis. Fusce eget ligula ut libero placerat tempor vulputate </p>
-                                <a href="#" class="btn btn-a">Learn More</a>
+
                             </div>
                         </div>
                     </div>
@@ -70,7 +70,7 @@
                                 <h1>We are offering the</h1>
                                 <h1 class="larg">Best Real Estate Deals</h1>
                                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Proin tellus elit ultricies at semper consectetur felis. Fusce eget ligula ut libero placerat tempor vulputate </p>
-                                <a href="#" class="btn btn-a">Read More</a>
+
                             </div>
                         </div>
                     </div>
@@ -258,7 +258,7 @@
             </div>
             <div class="col-md-8">
                 <div class="feature-image text-center">
-                    <img src="{{ asset('assets/frontend/images/feature/feature-v1.jpg')}}" alt="" />
+                    <img src="{{ asset('assets/frontend/images/feature/feature-v1.png')}}" style="height:678px;" alt="" />
                 </div>
             </div>
         </div>
