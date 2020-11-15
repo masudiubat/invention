@@ -1880,7 +1880,8 @@ header .login-btn a:hover {
     font-family: "Montserrat", sans-serif;
 }
 
-.property-list-area h3 span {
+.property-list-area h3 span,
+.property-details-area h3 span {
     color: #ff8c00;
 }
 .property-list-area .property-list-all .search-box {
@@ -3752,4 +3753,12 @@ Custom CSS
 
 .latest-post .latest-single-post strong {
     font-size: 14px;
+}
+.property-name-list a:hover,
+.left-list a:hover {
+    font-size: 17px;
+    color: #ff8c00;
+}
+.property-name-list a i {
+    color: #ff8c00;
 }

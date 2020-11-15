@@ -11,7 +11,7 @@
                 <div class="banner-content">
                     <h3>PROJECT DETAILS</h3>
                     <ul>
-                        <li><a href="home-1.html">Home</a></li>
+                        <li><a href="{{route('home.index')}}">Home</a></li>
                         <li>></li>
                         <li><a href="#"><span>Project details</span></a></li>
                     </ul>
@@ -25,10 +25,23 @@
 <section class="property-details-area section">
     <div class="container">
         <div class="row">
-            <div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12 floatright">
+            <div class="col-md-8 col-md-offset-2  col-sm-12">
+                <div class="section-heading-v1 text-center">
+                    <h3><span>
+                            @if(Session::has('locale') && Session::get('locale') == 'bn')
+                            {{ $project->name_bn }}
+                            @else
+                            {{ $project->name_en }}
+                            @endif
+                        </span></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Praesent eget massa purusuis nec libero auctor pharetra enim ultricies felis quisque ornare felis sit amet sodales pellentesque.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-9 col-sm-12 col-xs-12 floatright">
                 <div class="single-descrip">
-                    <h4>Villa On Washington Ave</h4>
-                    <p>Add to favorites 3 Rooms 5 Bedrooms Villas Sales</p>
                     <div class="bg-photo">
                         <img src="{{ asset('assets/frontend/images/properties/properties-details-2.1.jpg')}}" alt="">
                         <img src="{{ asset('assets/frontend/images/properties/properties-details-2.2.jpg')}}" alt="">
@@ -43,9 +56,20 @@
                     </div>
                 </div>
                 <div class="single-descrip">
-                    <h4>The Urban life style</h4>
-                    <h4 class="sm-head"><i class="fa fa-map-marker"></i> 58 Street, Newyork</h4>
-                    <p class="out-mar">Morbi blandit mi ex. Etiam laoreet tortor felis, non consequat sem aliquet ac. Curabitur a gravida risus. Pellentesque nec lorem ultricies, volutpat libero tempor, vehicula justo. Praesent ultrices ut sem sed porttitor. Suspendisse pretium tortor non tellus sodales blandit sed non eros. Mauris consequat eget dolor ut efficitur. Vestibulum tempus mi quis ex imperdiet laoreet. Proin lorem tellus, fermentum nec porttitor nec, posuere eget lacus. Sed tincidunt velit a accumsan consequat. Fusce at ligula eget metus feugiat luctus. </p>
+                    <h4>
+                        @if(Session::has('locale') && Session::get('locale') == 'bn')
+                        Project Description
+                        @else
+                        প্রকল্প বর্ণনা
+                        @endif
+                    </h4>
+                    <p class="out-mar">
+                        @if(Session::has('locale') && Session::get('locale') == 'bn')
+                        {{ $project->description_bn }}
+                        @else
+                        {{ $project->description_en }}
+                        @endif
+                    </p>
                 </div>
                 <div class="single-descrip">
                     <h4>Essential Information:</h4>
@@ -81,16 +105,33 @@
                         <li><i class="fa fa-chevron-circle-down"></i> Parking</li>
                         <li><i class="fa fa-chevron-circle-down"></i> Computer</li>
                     </ul>
+                    <!--
                     <div class="booknow-btn">
                         <a href="#" class="btn-a">Book Now</a>
                     </div>
+-->
                 </div>
-                <div class="single-descrip">
-                    <div class="property-map">
-                        <h4>Property Map:</h4>
-                        <img src="{{ asset('assets/frontend/images/map.jpg')}}" alt="" />
-                    </div>
-                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-12 floatright all-property left-list">
+                <h4 style="text-align:center; color:#ff8c00;">
+                    @if(Session::has('locale') && Session::get('locale') == 'bn')
+                    {{ $projectType->name_bn }}
+                    @else
+                    {{ $projectType->name_en }}
+                    @endif
+                </h4>
+                <ul>
+                    @foreach($projectNames as $project)
+                    <li><a href="{{ route('project.show', $project->id)}}"><i class="fa fa-chevron-circle-right"></i>
+                            @if(Session::has('locale') && Session::get('locale') == 'bn')
+                            {{ $project->name_bn }}
+                            @else
+                            {{ $project->name_en }}
+                            @endif
+                        </a></li>
+                    @endforeach
+                </ul>
             </div>
         </div>
     </div>

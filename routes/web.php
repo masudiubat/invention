@@ -45,7 +45,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home.index');
 Route::get('/service/show/{id}',  [ServiceController::class, 'show'])->name('service.show');
 Route::get('/about', [AboutController::class, 'index'])->name('about.index');
 Route::get('/client', [ProjectController::class, 'show_client_list'])->name('client.index');
-Route::get('/project/type/show/{id}', [ProjectTypeController::class, 'show'])->name('project.type.show');
+Route::get('/project/type/show/{id}', [ProjectController::class, 'index'])->name('project.type.show');
 Route::get('/project/show/{id}', [ProjectController::class, 'show'])->name('project.show');
 Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index');
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');

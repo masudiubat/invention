@@ -15,7 +15,7 @@
                 <div class="banner-content">
                     <h3>Project List</h3>
                     <ul>
-                        <li><a href="home-1.html">Home</a></li>
+                        <li><a href="{{route('home.index')}}">Home</a></li>
                         <li>></li>
                         <li><a href="#"><span>Project List</span></a></li>
                     </ul>

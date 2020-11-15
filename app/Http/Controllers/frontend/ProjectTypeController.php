@@ -47,8 +47,6 @@ class ProjectTypeController extends Controller
      */
     public function show($id)
     {
-        $projectType = ProjectType::findOrFail($id);
-        return view('pages.frontend.project-type.show', ['projectType' => $projectType]);
     }
 
     /**

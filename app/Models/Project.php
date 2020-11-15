@@ -2,10 +2,12 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use App\Models\User;
 use App\Models\Image;
+use App\Models\ProjectType;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
 
 class Project extends Model
 {
@@ -47,5 +49,10 @@ class Project extends Model
     public function images()
     {
         return $this->hasMany(Image::class);
+    }
+
+    public function project_type()
+    {
+        return $this->belongsTo(ProjectType::class);
     }
 }
